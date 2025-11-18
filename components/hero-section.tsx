@@ -28,11 +28,11 @@ export default function HeroSection() {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center">
         <div>
           {/* Profile Introduction */}
-          <div className="flex items-center justify-center mb-4 sm:mb-8">
+              <div className="flex items-center justify-center mb-4 sm:mb-8">
             <div className="glass rounded-full p-1 mr-3 sm:mr-4">
               <Image
                 src="/images/profile.jpg"
-                alt="Artu Grande - Vibecoder & Growth Strategist profile photo"
+                    alt="Kuldeep Khalotiya - Aspiring Software Engineer profile photo"
                 width={40}
                 height={40}
                 className="rounded-full sm:w-[60px] sm:h-[60px]"
@@ -57,16 +57,16 @@ export default function HeroSection() {
             <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white px-2 mb-4">
               {language === "en" ? (
                 <>
-                  Vibecoder & Growth Strategist <br />
+                  Kuldeep Khalotiya<br />
                   <span className="text-sm sm:text-lg md:text-xl lg:text-2xl font-normal text-white/90 block mt-4">
-                    I scale digital products people love, blending UX, Web3, and AI
+                    Aspiring Software Engineer — React · Python · Machine Learning
                   </span>
                 </>
               ) : (
                 <>
-                  Vibecoder & Growth Strategist <br />
+                  Kuldeep Khalotiya<br />
                   <span className="text-sm sm:text-lg md:text-xl lg:text-2xl font-normal text-white/90 block mt-4">
-                    Escalo productos digitales que la gente ama, combinando UX, Web3 e IA
+                    Ingeniero de software en formación — React · Python · Machine Learning
                   </span>
                 </>
               )}

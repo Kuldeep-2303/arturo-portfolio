@@ -72,7 +72,7 @@ export default function AboutSection() {
                 <div className="absolute -inset-4 glass rounded-full opacity-30 group-hover:opacity-50 transition-opacity"></div>
                 <Image
                   src="/images/profile.jpg"
-                  alt="Artu Grande - Vibecoder & Growth Strategist professional headshot"
+                  alt="Kuldeep Khalotiya - professional headshot"
                   width={400}
                   height={400}
                   className="relative rounded-full border-4 border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105"
@@ -82,12 +82,28 @@ export default function AboutSection() {
 
             {/* About Content */}
             <div className="space-y-6 text-center lg:text-left">
-              <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">About Me – Artu Grande</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">About Me – Kuldeep Khalotiya</h2>
 
               <div className="space-y-4 text-white/75 leading-relaxed">
-                <p>{renderBioWithLinks(t("about.bio1"))}</p>
-                <p>{renderBioWithLinks(t("about.bio2"))}</p>
-                <p>{renderBioWithLinks(t("about.bio3"))}</p>
+                <p>
+                  Aspiring Software Engineer specializing in React, Python, and Machine Learning. I build scalable,
+                  responsive web applications and ML-powered systems, with experience in Flask, Django, TensorFlow and
+                  OpenCV. I enjoy solving real-world problems through efficient, maintainable code and collaborating with
+                  cross-functional teams.
+                </p>
+
+                <p>
+                  Selected projects: <strong>Smart Classroom Monitoring System</strong> (AI-powered attendance and face
+                  recognition), <strong>AgroTech Platform</strong> (farmers’ dashboard and NDVI visualization), and a
+                  university website built with React + TypeScript. I focus on performance, accessibility and developer
+                  ergonomics.
+                </p>
+
+                <p>
+                  Contact me: <a href="mailto:kuldeepkhalotiya5@gmail.com" className="underline">kuldeepkhalotiya5@gmail.com</a>
+                  · <a href="https://github.com/Kuldeep-2303" target="_blank" rel="noopener noreferrer" className="underline">GitHub</a>
+                  · <a href="https://linkedin.com/in/kuldeep-khalotiya" target="_blank" rel="noopener noreferrer" className="underline">LinkedIn</a>
+                </p>
               </div>
 
               <div className="flex justify-center lg:justify-start items-center gap-6 mt-8">
@@ -124,12 +140,10 @@ export default function AboutSection() {
               <div className="flex justify-center lg:justify-start">
                 <Button
                   className="glass glass-hover border border-white/20 hover:border-white/40 text-white font-semibold px-8 py-4 mt-8 group transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white/10"
-                  onClick={() =>
-                    window.open("https://wa.me/5491154000421?text=Hola%2C%20%C2%BFC%C3%B3mo%20est%C3%A1s%3F", "_blank")
-                  }
+                  onClick={() => window.open("mailto:kuldeepkhalotiya5@gmail.com", "_blank")}
                 >
                   <MessageCircle className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" />
-                  {t("about.cta")}
+                  Contact Me
                 </Button>
               </div>
             </div>

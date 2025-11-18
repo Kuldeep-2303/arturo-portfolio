@@ -1,5 +1,6 @@
 {
-  "name": "my-v0-project",
+  "name": "kuldeep-portfolio",
+  "author": "Kuldeep Khalotiya <kuldeepkhalotiya5@gmail.com>",
   "version": "0.1.0",
   "private": true,
   "scripts": {
