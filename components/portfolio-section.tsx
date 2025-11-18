@@ -14,6 +14,27 @@ interface PortfolioItem {
 
 const productDesignItems: PortfolioItem[] = [
   {
+    id: "kk-global",
+    title: "KK Global University Website",
+    image: "/images/portfolio/kk-global.png",
+    link: "/projects/kk-global-university",
+    delay: 0,
+  },
+  {
+    id: "smart-classroom",
+    title: "Smart Classroom Monitoring System",
+    image: "/images/portfolio/smart-classroom.png",
+    link: "/projects/smart-classroom-monitoring",
+    delay: 50,
+  },
+  {
+    id: "agrotech",
+    title: "AgroTech Platform",
+    image: "/images/portfolio/agrotech.png",
+    link: "/projects/agrotech-platform",
+    delay: 100,
+  },
+  {
     id: "trebly",
     title: "Trebly",
     image: "/images/portfolio/treblyportada.png",
