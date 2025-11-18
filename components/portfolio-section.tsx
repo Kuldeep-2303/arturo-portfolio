@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/contexts/language-context"
 import Image from "next/image"
+import Link from "next/link"
 import { useEffect, useState } from "react"
 
 interface PortfolioItem {
@@ -239,23 +240,17 @@ export default function PortfolioSection() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
-          {currentItems.map((item, index) => (
-            <a
-              key={item.id}
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`group block relative overflow-hidden rounded-xl transform transition-all duration-700 ${
-                isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-              }`}
-              style={{
-                transitionDelay: `${item.delay}ms`,
-              }}
-            >
+          {currentItems.map((item, index) => {
+            const isInternal = item.link && item.link.startsWith("/")
+            const wrapperClass = `group block relative overflow-hidden rounded-xl transform transition-all duration-700 ${
+              isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+            }`
+
+            const content = (
               <div className="glass relative overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/30 aspect-[4/3] rounded-xl">
                 <Image
                   src={item.image || "/placeholder.svg"}
-                  alt={`${item.title} case study - Artu Grande UX design portfolio Web3 fintech`}
+                  alt={`${item.title} case study - portfolio`}
                   fill
                   className="object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-105"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
@@ -268,8 +263,20 @@ export default function PortfolioSection() {
                   <p className="text-white/90 text-xs md:text-sm font-medium">View Case Study →</p>
                 </div>
               </div>
-            </a>
-          ))}
+            )
+
+            const style = { transitionDelay: `${item.delay}ms` }
+
+            return isInternal ? (
+              <Link key={item.id} href={item.link} className={wrapperClass} style={style}>
+                {content}
+              </Link>
+            ) : (
+              <a key={item.id} href={item.link} target="_blank" rel="noopener noreferrer" className={wrapperClass} style={style}>
+                {content}
+              </a>
+            )
+          })}
         </div>
       </div>
     </section>
