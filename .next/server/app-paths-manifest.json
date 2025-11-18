@@ -1,0 +1,5 @@
+{
+  "/streaming/page": "app/streaming/page.js",
+  "/page": "app/page.js",
+  "/api/medium-posts/route": "app/api/medium-posts/route.js"
+}
